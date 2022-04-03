@@ -1,27 +1,17 @@
-//Business Logic----------------------------------------:
-function add(number1, number2) {
-	return number1 + number2;
-}
-
-function subtract(number1, number2) {
-	return number1 - number2;
-}
-
-function multiply(number1, number2) {
-	return number1 * number2;
-}
-
-function divide(number1, number2) {
-	return number1 / number2;
-}
-
-//UI Logic------------------------------------------------: 
 $(document).ready(function() {
-	$("form#add").submit(function(event) {
+  $("#formOne").submit(function(event) {
     event.preventDefault();
-    const number1 = parseInt($("#add1").val());
-    const number2 = parseInt($("#add2").val());
-    const result = add(number1, number2);
-    $("#output-add").text(result);
+    const person1Input = $("input#person1").val();
+    const person2Input = $("input#person2").val();
+    const animalInput= $("input#animal").val();
+    const exclamationInput = $("input#exclamation").val();
+    
+
+    $(".person1").text(person1Input);
+    $(".person2").text(person2Input);
+    $(".animal").text(animalInput);
+    $(".exclamation").text(exclamationInput);
+
+    $("#story").show();
   });
 });
